@@ -1,26 +1,17 @@
 @media screen and (min-width: 800px){
-    nav.flexbox {
-        display: inline;
-        justify-content: space-evenly;
-        align-items: center;
-    }
 
-    ul {        
-        
-        list-style-type: none;
-        margin: 10px;
-        padding: 10px;
-        width: 25%;
-        height: 100%; /* Full height */
+    ul {    
+        display: flex;
+        justify-content: space-evenly;
+        text-decoration: none;
         
     }
     
     
         li a {
-            display: block;
-            text-align: center;
-            padding: 14px 16px;
+            font-size: 20px;
             text-decoration: none;
+            text-align: left;
           }
 
           li a:hover {
@@ -40,34 +31,21 @@ display: grid;
 
 .misc text-block{
     display: flex;
-    flex-direction: column;
     justify-content: center;
 }
 
 }
 
 @media screen and (min-width: 850px){
-    nav.flexbox {
-        display: inline;
-        justify-content: space-evenly;
-        align-items: center;
-    }
 
     ul {        
-        
-        list-style-type: none;
-        margin: 8px;
-        padding: 10px;
-        width: 25%;
-        height: 100%; /* Full height */
-        
+        display: flex;
+        justify-content: space-evenly;
     }
     
     
         li a {
-            display: block;
-            text-align: center;
-            padding: 10px 10px;
+            text-align: left;
             text-decoration: none;
           }
 
@@ -85,7 +63,6 @@ display: grid;
 
 .misc text-block{
     display: flex;
-    flex-direction: row;
     justify-content: center;
 }
 
@@ -107,7 +84,7 @@ body{
 
 /*Make the h1 heading bigger with a bold font*/
 h1{
-	font-size: 50px; 
+	font-size: 55px; 
     font-weight: bold;
     color: rgb(99, 0, 69);
     
@@ -153,6 +130,7 @@ header{
     font-size: 18px;
     margin: 10px 0;
     height: 80vh;
+    background-color: white;
     background-image: url("../images/header.jpg");
     background-size: cover;
     background-position: center center;
@@ -217,14 +195,14 @@ nav .current{
 
 
 a{
-    color:midnightblue
+    color:midnightblue;
+    text-decoration:none;
 }
 /*Added this so the links stay the same color*/
 a:visited{color:midnightblue}
 
 a:hover{
     background-color: #e7f6fa;
-    text-decoration-style:dotted;
   }
 
 /*food page gallery flex*/
@@ -276,6 +254,7 @@ a.skip{
   }
 .grid img {
 border: 1px solid rgba(0,0,0,0.3);
+padding: 0;
   max-width: 100%;
   height: auto;
   width: auto;
@@ -336,4 +315,40 @@ span:after{
 h2:hover span{
     display:block;
 }
+
+.collapsible {
+    background-color:midnightblue;
+    font-family: "optima";
+    color:white;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    outline:rgb(99, 0, 69);
+  }
+
+  
+  .active, .collapsible:hover {
+    background-color:rgb(99, 0, 69);
+  }
+  
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: rgb(255, 231, 234);
+  }
+
+  .gridgolf{
+display: grid;
+  grid-gap: 20px;
+  align-items: left;
+}
+ 
+  
+
+ 
 

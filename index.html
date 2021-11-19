@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="images/heart.png"/>
     <link href='https://fonts.googleapis.com/css?family=Optima' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Aiyana</title>
   </head>
   <body>
@@ -35,29 +36,49 @@
     <div class="about text-block">
       <a id="about"></a>
       <h2>All About Aiyana</h2>
-      <main class="grid2">
+      <div class="grid2">
         <img src="images/soulcover.jpg" alt="poloraid picture at soulcycle ann arbor">
         <img src="images/sunselfie.jpg" alt="mirror selfie of me in the sunlight">
         <img src="images/flowernyc.jpg" alt="me with flowers in nyc">
         <img src="images/soulsmile.jpg" alt="me smiling giving a thumbs up at soulcycle ann arbor">
         
-      </main>
+      </div>
   
       <h3>Hey! I'm Aiyana Chopra and this is my portfolio website for SI 339! ♡</h3>
     </div>
-    <h4>hover over each word to get to explore more</h4>
+    <h4>Click on each word to get to explore more</h4>
     <br>
 
+<button class="collapsible">&#10085; Education</button>
+<div class="content">
+  <p>I spent the first twelve years of my education studying at Pine-Richland School District. Once I graduated, I enrolled at the University of Michigan where I am a current Junior. While at Michigan, I am studying Information Analysis in the School of Information while pursuing a minor in Law, Justice, and Social Change. On campus, I am involved in Women in Science and Engineering, Banking at Michigan, Empowering Women in the Law, Undergraduate Research at the University of Michigan Law School, Pi Beta Phi Sorority, Galvanize the Greeks, and I also TA a Psychology Course!</p>
+</div>
+<button class="collapsible">&#10085; Personal</button>
+<div class="content">
+  <p>My family and I have lived in Pittsburgh our entire life. Our family consists of my mom, my dad, my sister, and most importantly our puppy Coco. My entire family is passionate about technology, seeing as my dad owns his own artificial intelligence company, my mom works in cybersecurity, and my sister is a solutions engineer at Wise! As a family, we also all love golfing together, doing yoga, and making family dinners.</p>
+</div>
+<button class="collapsible">&#10085; About My Site</button>
+<div class="content">
+  <p>On this site, you will learn all about my life! You can navigate this website though the navbar at the top of the screen and get to know more about my work experience, day to day life, and what I am currently eating on campus :) Hope you enjoy this glimpse into my life!</p>
+</div>
 
-  <div class="hoverpage">
 
-    <h2>&#10085; Education<span>I spent the first twelve years of my education studying at Pine-Richland School District. Once I graduated, I enrolled at the University of Michigan where I am a current Junior. While at Michigan, I am studying Information Analysis in the School of Information while pursuing a minor in Law, Justice, and Social Change. On campus, I am involved in Women in Science and Engineering, Banking at Michigan, Empowering Women in the Law, Undergraduate Research at the University of Michigan Law School, Pi Beta Phi Sorority, Galvanize the Greeks, and I also TA a Psychology Course!</span></h2>
-    
-    <h2>&#10085; Personal<span>My family and I have lived in Pittsburgh our entire life. Our family consists of my mom, my dad, my sister, and most importantly our puppy Coco. My entire family is passionate about technology, seeing as my dad owns his own artificial intelligence company, my mom works in cybersecurity, and my sister is a solutions engineer at Wise! As a family, we also all love golfing together, doing yoga, and making family dinners.</span></h2>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
 
-    <h2>&#10085; About My Site<span>On this site, you will learn all about my life! You can navigate this website though the navbar at the top of the screen and get to know more about my work experience, day to day life, and what I am currently eating on campus :) Hope you enjoy this glimpse into my life!</span></h2>
-
-  </div>
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
 
   </main>
   <footer>
